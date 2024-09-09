@@ -628,6 +628,23 @@
         <Param val="False" valType="bool" updates="constant" name="storeCorrect"/>
         <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
       </KeyboardComponent>
+      <CodeComponent name="code_trial_dots" plugin="None">
+        <Param val="from pylsl import StreamInfo, StreamOutlet&amp;#10;&amp;#10;# Setup LSL outlet&amp;#10;info = StreamInfo(&quot;Psychopy&quot;, &quot;Markers&quot;, 1, 0, &quot;string&quot;, &quot;PsychopyUUID0001&quot;)&amp;#10;outlet = StreamOutlet(info)&amp;#10;outlet.push_sample([&quot;before_experiment&quot;])" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="outlet.push_sample([&quot;begin_experiment&quot;])" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="outlet.push_sample([f&quot;Dots trial begin: {trials_dots.thisN+1}&quot;])&amp;#10;outlet.push_sample([f&quot;dot_direction: {dot_direction}&quot;])&amp;#10;outlet.push_sample([f&quot;dot_speed: {dot_speed}&quot;])&amp;#10;outlet.push_sample([f&quot;dot_coherence: {dot_coherence}&quot;])" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="Py" valType="str" updates="None" name="Code Type"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="code_trial_dots" valType="code" updates="None" name="name"/>
+      </CodeComponent>
     </Routine>
     <Routine name="block_end">
       <RoutineSettingsComponent name="block_end" plugin="None">
