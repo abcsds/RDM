@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" ?>
-<PsychoPy2experiment encoding="utf-8" version="2024.2.1post4">
+<PsychoPy2experiment encoding="utf-8" version="2023.2.3">
   <Settings>
     <Param val="3" valType="str" updates="None" name="Audio latency priority"/>
     <Param val="ptb" valType="str" updates="None" name="Audio lib"/>
@@ -60,6 +60,7 @@
     <Param val="CONTINUOUS" valType="str" updates="None" name="mgMove"/>
     <Param val="0.5" valType="num" updates="None" name="mgSaccade"/>
     <Param val="neon.local" valType="str" updates="None" name="plCompanionAddress"/>
+    <Param val="scene_camera.json" valType="file" updates="None" name="plCompanionCameraCalibration"/>
     <Param val="8080" valType="num" updates="None" name="plCompanionPort"/>
     <Param val="True" valType="bool" updates="None" name="plCompanionRecordingEnabled"/>
     <Param val="0.6" valType="num" updates="None" name="plConfidenceThreshold"/>
@@ -586,7 +587,7 @@
         <Param val="dot_direction" valType="num" updates="set every repeat" name="dir"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="30" valType="num" updates="None" name="dotLife"/>
-        <Param val="2" valType="num" updates="constant" name="dotSize"/>
+        <Param val="5" valType="num" updates="constant" name="dotSize"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="(0.0, 0.0)" valType="list" updates="constant" name="fieldPos"/>
         <Param val="circle" valType="str" updates="constant" name="fieldShape"/>
@@ -782,11 +783,11 @@
         <Param val="0.0" valType="num" updates="constant" name="dir"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="30" valType="num" updates="None" name="dotLife"/>
-        <Param val="2" valType="num" updates="constant" name="dotSize"/>
+        <Param val="5" valType="num" updates="constant" name="dotSize"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="(0.0, 0.0)" valType="list" updates="constant" name="fieldPos"/>
         <Param val="circle" valType="str" updates="constant" name="fieldShape"/>
-        <Param val="1.0" valType="num" updates="constant" name="fieldSize"/>
+        <Param val="0.8" valType="num" updates="constant" name="fieldSize"/>
         <Param val="100" valType="int" updates="constant" name="nDots"/>
         <Param val="dots_train_coh_100" valType="code" updates="None" name="name"/>
         <Param val="direction" valType="str" updates="None" name="noiseDots"/>
@@ -916,11 +917,11 @@
         <Param val="180" valType="num" updates="constant" name="dir"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="30" valType="num" updates="None" name="dotLife"/>
-        <Param val="2" valType="num" updates="constant" name="dotSize"/>
+        <Param val="5" valType="num" updates="constant" name="dotSize"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="(0.0, 0.0)" valType="list" updates="constant" name="fieldPos"/>
         <Param val="circle" valType="str" updates="constant" name="fieldShape"/>
-        <Param val="1.0" valType="num" updates="constant" name="fieldSize"/>
+        <Param val="0.8" valType="num" updates="constant" name="fieldSize"/>
         <Param val="100" valType="int" updates="constant" name="nDots"/>
         <Param val="dots_train_coh_50" valType="code" updates="None" name="name"/>
         <Param val="direction" valType="str" updates="None" name="noiseDots"/>
@@ -1050,11 +1051,11 @@
         <Param val="180" valType="num" updates="constant" name="dir"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="30" valType="num" updates="None" name="dotLife"/>
-        <Param val="2" valType="num" updates="constant" name="dotSize"/>
+        <Param val="5" valType="num" updates="constant" name="dotSize"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="(0.0, 0.0)" valType="list" updates="constant" name="fieldPos"/>
         <Param val="circle" valType="str" updates="constant" name="fieldShape"/>
-        <Param val="1.0" valType="num" updates="constant" name="fieldSize"/>
+        <Param val="0.8" valType="num" updates="constant" name="fieldSize"/>
         <Param val="100" valType="int" updates="constant" name="nDots"/>
         <Param val="dots_train_coh_06" valType="code" updates="None" name="name"/>
         <Param val="direction" valType="str" updates="None" name="noiseDots"/>
@@ -1160,6 +1161,9 @@
     </Routine>
   </Routines>
   <Flow>
+    <Routine name="train_coh_100"/>
+    <Routine name="train_coh_50"/>
+    <Routine name="train_coh_06"/>
     <Routine name="Welcome"/>
     <Routine name="intro_ffmq"/>
     <LoopInitiator loopType="TrialHandler" name="trials_ffmq">
